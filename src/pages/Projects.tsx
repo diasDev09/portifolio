@@ -13,7 +13,7 @@ export default function Projects() {
         : projects
 
     const chip = (active: boolean) =>
-        `rounded-full border px-3 py-1 text-sm transition-colors ${active ? 'border-white bg-white text-black' : 'border-border text-muted hover:border-zinc-500'
+        `rounded-full border px-3 py-1 text-sm transition-colors ${active ? 'border-ink bg-ink text-white' : 'border-border text-muted hover:border-ink'
         }`
 
     return (

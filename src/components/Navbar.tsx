@@ -12,7 +12,7 @@ export default function Navbar() {
     const [open, setOpen] = useState(false)
 
     return (
-        <header className="border-b border-border bg-accent">
+        <header className="border-b border-border bg-bg">
             <nav aria-label="Principal" className="mx-auto max-w-5xl px-6 py-4">
                 <div className="flex items-center justify-between">
                     <span className="font-semibold">DIAS DEVELOPER</span>
@@ -33,8 +33,8 @@ export default function Navbar() {
                                     end={to === '/'}
                                     className={({ isActive }) =>
                                         isActive
-                                            ? 'font-medium text-white'
-                                            : 'text-muted transition-colors hover:text-white'
+                                            ? 'font-medium text-ink'
+                                            : 'text-muted transition-colors hover:text-ink'
                                     }
                                 >
                                     {label}
@@ -51,7 +51,7 @@ export default function Navbar() {
                                 end={to === '/'}
                                 onClick={() => setOpen(false)}
                                 className={({ isActive }) =>
-                                    isActive ? 'font-medium text-white' : 'text-muted hover:text-white'
+                                    isActive ? 'font-medium text-ink' : 'text-muted hover:text-ink'
                                 }
                             >
                                 {label}

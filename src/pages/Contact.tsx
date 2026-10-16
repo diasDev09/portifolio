@@ -21,7 +21,7 @@ export default function Contact() {
                             href={c.href}
                             target={c.href.startsWith('mailto:') ? undefined : '_blank'}
                             rel="noreferrer"
-                            className="block rounded-lg border border-border bg-surface p-4 transition-colors hover:border-zinc-500"
+                            className="block rounded-lg border border-border bg-surface p-4 transition-colors hover:border-ink"
                         >
                             <span className="text-sm text-muted">{c.label}</span>
                             <p className="mt-1 break-all font-medium">{c.value}</p>

@@ -8,7 +8,7 @@ export default function Team({ members }: { members: Member[] }) {
                     {m.avatar ? (
                         <img src={m.avatar} alt={m.name} className="h-10 w-10 rounded-full object-cover" />
                     ) : (
-                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent font-semibold">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent font-semibold text-white">
                             {m.name.charAt(0)}
                         </div>
                     )}
