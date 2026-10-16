@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import { Wordmark } from './Logo'
 
 const links = [
     { to: '/', label: 'Home' },
@@ -15,7 +16,9 @@ export default function Navbar() {
         <header className="border-b border-border bg-bg">
             <nav aria-label="Principal" className="mx-auto max-w-5xl px-6 py-4">
                 <div className="flex items-center justify-between">
-                    <span className="font-semibold">DIAS DEVELOPER</span>
+                    <Link to="/" aria-label="DiasDev, ir para o início" className="text-ink">
+                        <Wordmark className="h-5 w-auto" />
+                    </Link>
                     <button
                         type="button"
                         onClick={() => setOpen((o) => !o)}

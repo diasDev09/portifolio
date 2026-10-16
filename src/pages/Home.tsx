@@ -10,18 +10,33 @@ export default function Home() {
     return (
         <div className="space-y-16">
             <Seo description="Meu pequeno portfólio como desenvolvedor: projetos, habilidades e trajetória." />
-            <section>
-                <p className="text-sm text-muted">{profile.role}</p>
-                <h1 className="mt-1 text-4xl font-bold">Olá, eu sou {profile.name}</h1>
-                <p className="mt-3 max-w-xl text-muted">{profile.tagline}</p>
-                <div className="mt-6 flex gap-3">
-                    <Link to="/projetos" className="rounded-md bg-accent px-4 py-2 text-sm font-medium text-white hover:opacity-85">
-                        Ver projetos
-                    </Link>
-                    <Link to="/contato" className="rounded-md border border-border px-4 py-2 text-sm text-ink hover:border-ink">
-                        Entrar em contato
-                    </Link>
+            <section className="grid items-center gap-8 md:grid-cols-2">
+                <div>
+                    <p className="text-sm text-muted">{profile.role}</p>
+                    <h1 className="mt-1 text-4xl font-bold">Olá, eu sou {profile.name}</h1>
+                    <p className="mt-3 max-w-xl text-muted">{profile.tagline}</p>
+                    <div className="mt-6 flex gap-3">
+                        <Link
+                            to="/projetos"
+                            className="rounded-md bg-accent px-4 py-2 text-sm font-medium text-white hover:opacity-85"
+                        >
+                            Ver projetos
+                        </Link>
+                        <Link
+                            to="/contato"
+                            className="rounded-md border border-border px-4 py-2 text-sm hover:border-ink"
+                        >
+                            Entrar em contato
+                        </Link>
+                    </div>
                 </div>
+                <img
+                    src={profile.photo}
+                    alt={`Retrato de ${profile.name}`}
+                    width={900}
+                    height={686}
+                    className="mx-auto w-full max-w-md md:order-last "
+                />
             </section>
 
             <section>

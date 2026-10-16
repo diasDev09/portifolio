@@ -1,4 +1,5 @@
 export const profile = {
+    photo: '/images/perfil/retrato.webp',
     name: 'Seu Nome',
     role: 'Desenvolvedor Full Stack',
     tagline: 'Construo interfaces web claras, rápidas e acessíveis, e também desenvolvo back-ends robustos e escaláveis. Além de uma otima experiência com bancos de dados e APIs.',
