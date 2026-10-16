@@ -5,9 +5,18 @@ export default function About() {
     return (
         <div className="space-y-12">
             <Seo title="Sobre mim" description="Conheça a minha trajetória, formação, experiência e tecnologias." />
-            <section>
-                <h1 className="text-3xl font-bold">Sobre mim</h1>
-                <p className="mt-3 max-w-2xl text-muted">{profile.bio}</p>
+            <section className="grid items-center gap-8 md:grid-cols-[1fr_20rem]">
+                <div>
+                    <h1 className="text-3xl font-bold">Sobre mim</h1>
+                    <p className="mt-3 max-w-2xl text-muted">{profile.bio}</p>
+                </div>
+                <img
+                    src={profile.photo}
+                    alt={`Retrato de ${profile.name}`}
+                    width={900}
+                    height={686}
+                    className="w-full"
+                />
             </section>
 
             <section>
