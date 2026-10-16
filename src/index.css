@@ -1,20 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #0a0a0a;
-  --color-surface: #141414;
-  --color-surface-2: #2a2a2a;
-  --color-border: #2e2e2e;
-  --color-accent: #1a2a5e;
-  --color-muted: #a1a1aa;
+  --color-bg: #ffffff;
+  --color-surface: #f0e7e1;
+  --color-surface-2: #e3d6cd;
+  --color-border: #d8cbc2;
+  --color-accent: #1c1c1c;
+  --color-ink: #141414;
+  --color-muted: #6b625c;
 }
 
 body {
-  @apply bg-bg text-zinc-100 antialiased;
+  @apply bg-bg text-ink antialiased;
 }
-
 :focus-visible {
-  outline: 2px solid #ffffff;
+  outline: 2px solid var(--color-ink);
   outline-offset: 2px;
 }
 
