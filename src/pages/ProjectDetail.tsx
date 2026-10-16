@@ -17,7 +17,7 @@ export default function ProjectDetail() {
             <div>
                 <Seo title="Projeto não encontrado" description="O projeto solicitado não existe." />
                 <h1 className="text-2xl font-bold">Projeto não encontrado</h1>
-                <Link to="/projetos" className="text-muted hover:text-white">
+                <Link to="/projetos" className="text-muted hover:text-ink">
                     ← Voltar para projetos
                 </Link>
             </div>
@@ -30,7 +30,7 @@ export default function ProjectDetail() {
     return (
         <div className="space-y-8">
             <Seo title={project.title} description={project.summary} />
-            <Link to="/projetos" className="text-sm text-muted hover:text-white">
+            <Link to="/projetos" className="text-sm text-muted hover:text-ink">
                 ← Projetos
             </Link>
 

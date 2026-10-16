@@ -67,7 +67,7 @@ export default function Gallery({ images, title }: { images: string[]; title: st
                         ref={closeRef}
                         onClick={() => setActive(null)}
                         aria-label="Fechar"
-                        className="absolute right-4 top-4 rounded-full bg-surface-2 px-3 py-1 text-sm"
+                        className="absolute right-4 top-4 rounded-full bg-surface-2 px-3 py-1 text-sm text-ink"
                     >
                         Fechar ✕
                     </button>

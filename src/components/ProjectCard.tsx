@@ -5,7 +5,7 @@ export default function ProjectCard({ project }: { project: Project }) {
     return (
         <Link
             to={`/projetos/${project.slug}`}
-            className="block overflow-hidden rounded-lg border border-border bg-surface transition-colors hover:border-zinc-500"
+            className="block overflow-hidden rounded-lg border border-border bg-surface transition-colors hover:border-ink"
         >
             <div className="aspect-video bg-surface-2">
                 <img
