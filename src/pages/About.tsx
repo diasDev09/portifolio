@@ -1,8 +1,10 @@
 import { education, experience, profile, skills } from '../data/profile'
+import Seo from '../components/Seo'
 
 export default function About() {
     return (
         <div className="space-y-12">
+            <Seo title="Sobre mim" description="Conheça a minha trajetória, formação, experiência e tecnologias." />
             <section>
                 <h1 className="text-3xl font-bold">Sobre mim</h1>
                 <p className="mt-3 max-w-2xl text-muted">{profile.bio}</p>

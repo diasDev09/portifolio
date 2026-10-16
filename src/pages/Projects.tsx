@@ -2,6 +2,7 @@ import { useState } from 'react'
 import ProjectCard from '../components/ProjectCard'
 import { getAllTechnologies } from '../data/helpers'
 import { projects } from '../data/projects'
+import Seo from '../components/Seo'
 
 export default function Projects() {
     const [selected, setSelected] = useState<string | null>(null)
@@ -17,6 +18,7 @@ export default function Projects() {
 
     return (
         <div>
+            <Seo title="Projetos" description="Projetos desenvolvidos por mim, com filtro por tecnologia." />
             <h1 className="text-3xl font-bold">Projetos</h1>
 
             <div className="mt-6 flex flex-wrap gap-2">

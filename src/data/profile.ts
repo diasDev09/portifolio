@@ -1,7 +1,7 @@
 export const profile = {
     name: 'Seu Nome',
-    role: 'Desenvolvedor Front-end',
-    tagline: 'Construo interfaces web claras, rápidas e acessíveis.',
+    role: 'Desenvolvedor Full Stack',
+    tagline: 'Construo interfaces web claras, rápidas e acessíveis, e também desenvolvo back-ends robustos e escaláveis. Além de uma otima experiência com bancos de dados e APIs.',
     bio: 'Escreva aqui um parágrafo sobre quem você é, o que gosta de fazer e o que busca profissionalmente.',
     email: 'seu-email@exemplo.com',
     github: 'https://github.com/seu-usuario',

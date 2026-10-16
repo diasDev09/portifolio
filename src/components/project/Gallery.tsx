@@ -1,7 +1,20 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function Gallery({ images, title }: { images: string[]; title: string }) {
     const [active, setActive] = useState<number | null>(null)
+    const closeRef = useRef<HTMLButtonElement>(null)
+    const triggerRef = useRef<HTMLElement | null>(null)
+
+    const open = (i: number, el: HTMLElement) => {
+        triggerRef.current = el
+        setActive(i)
+    }
+
+    const isOpen = active !== null
+    useEffect(() => {
+        if (isOpen) closeRef.current?.focus()
+        else triggerRef.current?.focus()
+    }, [isOpen])
 
     useEffect(() => {
         if (active === null) return
@@ -22,7 +35,7 @@ export default function Gallery({ images, title }: { images: string[]; title: st
                 {images.map((src, i) => (
                     <li key={src}>
                         <button
-                            onClick={() => setActive(i)}
+                            onClick={(e) => open(i, e.currentTarget)}
                             className="block aspect-video w-full overflow-hidden rounded-md bg-surface-2"
                         >
                             <img
@@ -51,6 +64,7 @@ export default function Gallery({ images, title }: { images: string[]; title: st
                         className="max-h-full max-w-full rounded-md"
                     />
                     <button
+                        ref={closeRef}
                         onClick={() => setActive(null)}
                         aria-label="Fechar"
                         className="absolute right-4 top-4 rounded-full bg-surface-2 px-3 py-1 text-sm"
