@@ -12,3 +12,8 @@
 body {
   @apply bg-bg text-zinc-100 antialiased;
 }
+
+:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
