@@ -15,7 +15,7 @@ export default function Navbar() {
         <header className="border-b border-border bg-accent">
             <nav aria-label="Principal" className="mx-auto max-w-5xl px-6 py-4">
                 <div className="flex items-center justify-between">
-                    <span className="font-semibold">Caio Dias</span>
+                    <span className="font-semibold">DIAS DEVELOPER</span>
                     <button
                         type="button"
                         onClick={() => setOpen((o) => !o)}

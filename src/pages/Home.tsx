@@ -2,12 +2,14 @@ import { Link } from 'react-router-dom'
 import ProjectCard from '../components/ProjectCard'
 import { getFeaturedProjects } from '../data/helpers'
 import { profile, skills, timeline } from '../data/profile'
+import Seo from '../components/Seo'
 
 export default function Home() {
     const featured = getFeaturedProjects()
 
     return (
         <div className="space-y-16">
+            <Seo description="Meu pequeno portfólio como desenvolvedor: projetos, habilidades e trajetória." />
             <section>
                 <p className="text-sm text-muted">{profile.role}</p>
                 <h1 className="mt-1 text-4xl font-bold">Olá, eu sou {profile.name}</h1>

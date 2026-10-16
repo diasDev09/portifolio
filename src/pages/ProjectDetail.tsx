@@ -6,6 +6,7 @@ import ProjectSection from '../components/project/ProjectSection'
 import ProjectSubnav from '../components/project/ProjectSubnav'
 import Results from '../components/project/Results'
 import Team from '../components/project/Team'
+import Seo from '../components/Seo'
 
 export default function ProjectDetail() {
     const { slug } = useParams()
@@ -14,6 +15,7 @@ export default function ProjectDetail() {
     if (!project) {
         return (
             <div>
+                <Seo title="Projeto não encontrado" description="O projeto solicitado não existe." />
                 <h1 className="text-2xl font-bold">Projeto não encontrado</h1>
                 <Link to="/projetos" className="text-muted hover:text-white">
                     ← Voltar para projetos
@@ -27,6 +29,7 @@ export default function ProjectDetail() {
 
     return (
         <div className="space-y-8">
+            <Seo title={project.title} description={project.summary} />
             <Link to="/projetos" className="text-sm text-muted hover:text-white">
                 ← Projetos
             </Link>

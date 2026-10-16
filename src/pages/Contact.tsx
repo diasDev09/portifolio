@@ -1,4 +1,5 @@
 import { profile } from '../data/profile'
+import Seo from '../components/Seo'
 
 const channels = [
     { label: 'E-mail', value: profile.email, href: `mailto:${profile.email}` },
@@ -9,6 +10,7 @@ const channels = [
 export default function Contact() {
     return (
         <div>
+            <Seo title="Contato" description="Entre em contato comigo por e-mail, LinkedIn ou GitHub." />
             <h1 className="text-3xl font-bold">Contato</h1>
             <p className="mt-3 text-muted">Vamos conversar? Escolha o canal que preferir.</p>
 
