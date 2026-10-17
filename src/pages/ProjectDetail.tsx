@@ -58,7 +58,7 @@ export default function ProjectDetail() {
                     </ProjectSection>
                 )}
                 {project.team.length > 0 && (
-                    <ProjectSection title="Equipe">
+                    <ProjectSection title="Equipe" className="md:col-span-2">
                         <Team members={project.team} />
                     </ProjectSection>
                 )}
