@@ -2,9 +2,9 @@ import type { Member } from '../../types/project'
 
 export default function Team({ members }: { members: Member[] }) {
     return (
-        <ul className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3">
+        <ul className="flex flex-wrap justify-center gap-x-4 gap-y-6">
             {members.map((m) => (
-                <li key={m.name} className="text-center">
+                <li key={m.name} className="w-24 text-center sm:w-32">
                     <div className="aspect-3/4 overflow-hidden rounded-md bg-surface-2">
                         {m.avatar ? (
                             <img
@@ -20,8 +20,8 @@ export default function Team({ members }: { members: Member[] }) {
                             </div>
                         )}
                     </div>
-                    <h3 className="mt-3 font-semibold">Função: {m.role}</h3>
-                    <p className="mt-1 text-xs uppercase tracking-wide text-muted">
+                    <h3 className="mt-2 text-xs font-semibold sm:text-sm">Função: {m.role}</h3>
+                    <p className="mt-0.5 text-[0.65rem] uppercase leading-tight tracking-wide text-muted">
                         {m.github ? (
                             <a href={m.github} target="_blank" rel="noreferrer" className="hover:text-ink hover:underline">
                                 {m.name}
@@ -30,7 +30,7 @@ export default function Team({ members }: { members: Member[] }) {
                             m.name
                         )}
                     </p>
-                    {m.contribution && <p className="mt-2 text-sm text-muted">{m.contribution}</p>}
+                    {m.contribution && <p className="mt-1 text-xs text-muted">{m.contribution}</p>}
                 </li>
             ))}
         </ul>
