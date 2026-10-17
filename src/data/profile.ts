@@ -1,6 +1,6 @@
 export const profile = {
     photo: '/images/perfil/retrato.webp',
-    name: 'Caio Dias',
+    name: 'Caio',
     role: 'Desenvolvedor Full Stack',
     tagline: 'Transformo ideias em interfaces rápidas, acessíveis e bonitas. No back-end, construo soluções robustas e escaláveis, conectando tudo com APIs e bancos de dados. Do pixel à lógica, faço a tecnologia funcionar de verdade! .',
     bio: 'Tenho formação técnica em Informática e atualmente cursando Ciência da Computação, aqui em Pernambuco. Descobri na programação uma forma de transformar ideias em algo real, e é isso que me move: pegar um problema, pensar numa solução e ver funcionando na tela. Gosto de construir projetos com tudo que eu puder experienciar, de me aventurar em novas linguagens, e de aprender fazendo, errando, ajustando e tentando de novo. Costumo praticar com projetos pessoais, como relógios, quizzes e pequenas aplicações. Como aspirante a desenvolvedor, busco uma oportunidade onde eu possa contribuir com o que já sei, aprender com pessoas mais experientes e, com a curiosidade e a vontade de evoluir que me trouxeram até aqui.',

@@ -5,6 +5,7 @@ const channels = [
     { label: 'E-mail', value: profile.email, href: `mailto:${profile.email}` },
     { label: 'LinkedIn', value: 'Meu perfil', href: profile.linkedin },
     { label: 'GitHub', value: 'Meu perfil', href: profile.github },
+    { label: 'Instagram', value: 'Meu perfil', href: profile.instagram },
 ]
 
 export default function Contact() {

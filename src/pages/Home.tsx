@@ -13,7 +13,7 @@ export default function Home() {
             <section className="grid items-center gap-8 md:grid-cols-2">
                 <div>
                     <p className="text-sm text-muted">{profile.role}</p>
-                    <h1 className="mt-1 text-4xl font-bold">Olá, eu sou {profile.name}</h1>
+                    <h1 className="mt-1 text-4xl font-bold">Dalê, é o {profile.name}</h1>
                     <p className="mt-3 max-w-xl text-muted">{profile.tagline}</p>
                     <div className="mt-6 flex gap-3">
                         <Link
