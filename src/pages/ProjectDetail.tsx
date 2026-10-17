@@ -7,6 +7,7 @@ import ProjectSubnav from '../components/project/ProjectSubnav'
 import Results from '../components/project/Results'
 import Team from '../components/project/Team'
 import Seo from '../components/Seo'
+import NotFound from './NotFound'
 
 export default function ProjectDetail() {
     const { slug } = useParams()
@@ -14,13 +15,10 @@ export default function ProjectDetail() {
 
     if (!project) {
         return (
-            <div>
-                <Seo title="Projeto não encontrado" description="O projeto solicitado não existe." />
-                <h1 className="text-2xl font-bold">Projeto não encontrado</h1>
-                <Link to="/projetos" className="text-muted hover:text-ink">
-                    ← Voltar para projetos
-                </Link>
-            </div>
+            <NotFound
+                title="Projeto não encontrado"
+                message="Esse projeto ainda não tem uma página ou o endereço está incorreto."
+            />
         )
     }
 
