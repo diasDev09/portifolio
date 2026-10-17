@@ -1,6 +1,6 @@
 export interface ProjectLink {
     label: string // "Visão geral", "GitHub", "Documentação", "Trello", "Demonstração"
-    url: string
+    url: string // deixe '' para mostrar o link como "em breve"
 }
 
 export interface Member {
