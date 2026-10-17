@@ -51,7 +51,7 @@ export default function ProjectDetail() {
 
             <div className="grid gap-6 md:grid-cols-2">
                 {project.gallery.length > 0 && (
-                    <ProjectSection title="Galeria">
+                    <ProjectSection title="Galeria" className="md:col-span-2">
                         <Gallery images={project.gallery} title={project.title} />
                     </ProjectSection>
                 )}

@@ -31,18 +31,18 @@ export default function Gallery({ images, title }: { images: string[]; title: st
 
     return (
         <>
-            <ul className="grid gap-3 sm:grid-cols-2">
+            <ul className="grid grid-cols-[repeat(auto-fit,minmax(14rem,1fr))] gap-4">
                 {images.map((src, i) => (
                     <li key={src}>
                         <button
                             onClick={(e) => open(i, e.currentTarget)}
-                            className="block aspect-video w-full overflow-hidden rounded-md bg-surface-2"
+                            className="flex h-72 w-full items-center justify-center overflow-hidden rounded-md bg-surface-2/50 sm:h-96"
                         >
                             <img
                                 src={src}
                                 alt={`${title}: imagem ${i + 1}`}
                                 loading="lazy"
-                                className="h-full w-full object-cover transition-transform hover:scale-105"
+                                className="max-h-full max-w-full object-contain transition-transform hover:scale-[1.02]"
                             />
                         </button>
                     </li>
