@@ -15,6 +15,7 @@ export interface ProjectResults {
     problem: string
     solution: string
     learnings: string
+    status: string
 }
 
 export interface Project {
