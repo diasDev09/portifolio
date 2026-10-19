@@ -1,19 +1,15 @@
 import { useEffect, useState } from 'react'
 import { scrollToTop } from '../utils/scroll'
 
-// Distância (px) do fim da página a partir da qual o botão aparece.
-// Para aparecer logo após começar a rolar, troque a regra em update() por: scrollY > 400
-const NEAR_BOTTOM = 200
+// Quantos pixels a página precisa ser rolada para o botão aparecer.
+const SHOW_AFTER = 300
 
 export default function BackToTop() {
     const [visible, setVisible] = useState(false)
 
     useEffect(() => {
         const update = () => {
-            const { scrollY, innerHeight } = window
-            const pageHeight = document.documentElement.scrollHeight
-            const hasScroll = pageHeight > innerHeight + 50
-            setVisible(hasScroll && scrollY + innerHeight >= pageHeight - NEAR_BOTTOM)
+            setVisible(window.scrollY > SHOW_AFTER)
         }
 
         update()

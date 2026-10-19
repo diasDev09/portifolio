@@ -28,7 +28,7 @@ export default function Navbar() {
                         to="/"
                         onClick={handleLogoClick}
                         aria-label="DiasDev, ir para o início"
-                        className="shrink-0 text-ink"
+                        className="shrink-0 origin-left text-ink transition duration-200 hover:scale-105 hover:text-muted active:scale-95"
                     >
                         <Wordmark className="h-4 w-auto sm:h-5 md:h-6" />
                     </Link>
