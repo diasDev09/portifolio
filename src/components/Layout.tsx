@@ -28,7 +28,7 @@ export default function Layout() {
                 </div>
             </main>
             <footer className="border-t border-border py-6 text-center text-sm text-muted">
-                © {currentYear} Caio Dias
+                © {currentYear} CaioLABS
             </footer>
             <BackToTop />
         </div>
