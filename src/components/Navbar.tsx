@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
+import { scrollToTop } from '../utils/scroll'
 import { Wordmark } from './Logo'
 
 const links = [
-    { to: '/', label: 'Home' },
     { to: '/sobre', label: 'Sobre mim' },
     { to: '/projetos', label: 'Projetos' },
     { to: '/contato', label: 'Contato' },
@@ -11,13 +11,26 @@ const links = [
 
 export default function Navbar() {
     const [open, setOpen] = useState(false)
+    const { pathname } = useLocation()
+
+    // Fora da Home, o ScrollToTop já leva ao topo ao trocar de página.
+    // Na própria Home, a rolagem suave é feita aqui.
+    const handleLogoClick = () => {
+        setOpen(false)
+        if (pathname === '/') scrollToTop()
+    }
 
     return (
-        <header className="border-b border-border bg-bg">
-            <nav aria-label="Principal" className="mx-auto max-w-5xl px-6 py-4">
-                <div className="flex items-center justify-between">
-                    <Link to="/" aria-label="DiasDev, ir para o início" className="text-ink">
-                        <Wordmark className="h-5 w-auto" />
+        <header className="sticky top-0 z-40 border-b border-border bg-bg/90 backdrop-blur">
+            <nav aria-label="Principal" className="mx-auto max-w-5xl px-6 py-3 sm:py-4">
+                <div className="flex items-center justify-between gap-4">
+                    <Link
+                        to="/"
+                        onClick={handleLogoClick}
+                        aria-label="DiasDev, ir para o início"
+                        className="shrink-0 origin-left text-ink transition duration-200 hover:scale-105 hover:text-muted active:scale-95"
+                    >
+                        <Wordmark className="h-4 w-auto sm:h-5 md:h-6" />
                     </Link>
                     <button
                         type="button"
@@ -33,7 +46,6 @@ export default function Navbar() {
                             <li key={to}>
                                 <NavLink
                                     to={to}
-                                    end={to === '/'}
                                     className={({ isActive }) =>
                                         isActive
                                             ? 'font-medium text-ink'
@@ -51,7 +63,6 @@ export default function Navbar() {
                         <li key={to}>
                             <NavLink
                                 to={to}
-                                end={to === '/'}
                                 onClick={() => setOpen(false)}
                                 className={({ isActive }) =>
                                     isActive ? 'font-medium text-ink' : 'text-muted hover:text-ink'
